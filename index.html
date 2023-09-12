@@ -1,0 +1,73 @@
+<!DOCTYPE html> 
+<html>
+
+    <style>
+        table, td, th {
+            border:thin solid black;
+            padding:8px;
+          }
+        
+          table{
+            border:thick solid grey;
+            border-collapse:collapse;
+            width:100%;
+
+            background-color: lightblue; 
+          }
+
+    </style>
+    
+    <script src="script.js"></script>
+    
+    <body onload = "initialize();">
+        <!-- Heading --> 
+    <h1>Welcome to Roll Roll Roll Your Dice!</h1>
+    
+    <!-- Creating the form --> 
+    <form id = "inputform">  
+        How many dices do you want to roll? 
+        <label>
+            <input type = "radio" name = "dices" value = "1" /> 1
+        </label>
+        <label>
+            <input type = "radio" name = "dices" value = "2" /> 2
+        </label>
+        <label>
+            <input type = "radio" name = "dices" value = "3" /> 3
+        </label>
+
+        <br> 
+        
+        How many times do you want to roll te dice(s)? 
+        <label>
+            <input type = "text" name = "rollTimes"> 
+        </label>
+    </form> 
+        
+    <br> 
+        
+    <!-- Button to roll dice and clear table--> 
+        <button onclick = "rollDice();">Roll the Dice(s)</button> 
+        <button onclick = "clearTable()">Clear Table</button>
+
+    <br> 
+    <br>
+
+        <!-- Printing our mean, median, mode, # of doubles, # of triples --> 
+        <h4>Median, Mean, Mode, # of Doubles, # of Triples (In order): </h4>
+
+        <!-- Table --> 
+      <table id="dicetable">
+        <tr id = "firstrow"> 
+          <th>Roll</th>
+        </tr>
+    </body>
+
+    <!-- Mean, median, mode tags --> 
+    <p id = "median"></p> 
+    <p id = "mean" ></p>
+    <p id = "mode"></p> 
+    <p id = "numOfDoubles"></p> 
+    <p id = "numOfTriples"></p>
+    
+</html> 
